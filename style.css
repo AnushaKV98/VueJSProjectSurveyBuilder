@@ -1,0 +1,8 @@
+body{
+    background-color: #ffffff; 
+    background-image: linear-gradient(#acbb78, #ffffff);
+}
+
+li :hover{
+ background-color: gainsboro;
+}

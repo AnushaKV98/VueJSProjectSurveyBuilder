@@ -1,1 +1,36 @@
-n
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Survey Builder</title>
+
+</head>
+<body>   
+    <div id="app" class="container my-6">
+        <header>
+            <div class="tabs is-centered is-large">
+                <ul>
+                  <li> <a @click="displayContent1 = false" class="isActive">Create Survey</a></li>
+                  <li> <a @click="displayContent1 = true">View All Surveys</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="add-questions" v-if="!displayContent1" >
+            <add-questions-component></add-questions-component>
+        </div>
+
+        <div class="view-surevys" v-if="displayContent1"  >
+            <view-survey-component></view-survey-component>        
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
